@@ -10,7 +10,7 @@ export default function App() {
         alt="logo"
       />
       <h1>Dictionary</h1>
-      What would you like to search?
+
       <Dictionary />
       <footer className="FooterName">
         This page is code by Pallavi GR with SheCodes and is Open-sourded on
