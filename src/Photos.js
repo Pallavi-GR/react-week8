@@ -10,7 +10,7 @@ export default function Photos(props) {
             return (
               <div className="col-4" key={index}>
                 <a href={photo.src.original} target="_blank" rel="noreferrer">
-                  <img src={photo.src.tiny} className="img-fluid" alt="image" />
+                  <img src={photo.src.tiny} className="img-fluid" />
                 </a>
               </div>
             );
@@ -18,5 +18,7 @@ export default function Photos(props) {
         </div>
       </section>
     );
-  } else return null;
+  } else {
+    return null;
+  }
 }
