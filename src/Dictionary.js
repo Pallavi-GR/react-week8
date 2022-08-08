@@ -10,6 +10,18 @@ export default function Dictionary(props) {
   let [loaded, setLoaded] = useState(false);
   let [photos, setPhotos] = useState(null);
 
+  function handleHint(event) {
+    let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${event.target.id}`;
+    console.log(keyword);
+    axios.get(apiUrl).then(handleDictionaryResponse);
+    let pexelsApiKey =
+      "563492ad6f917000010000019a393949c72f44bb897f7f2eb94a0247";
+    let pexelsUrl = `https://api.pexels.com/v1/search/?per_page=9&query=${event.target.id}`;
+    axios
+      .get(pexelsUrl, { headers: { Authorization: `Bearer ${pexelsApiKey}` } })
+      .then(handlePexelsResponse);
+  }
+
   function handleDictionaryResponse(response) {
     setResults(response.data[0]);
   }
@@ -48,21 +60,30 @@ export default function Dictionary(props) {
   if (loaded) {
     return (
       <div className="Dictionary">
-        <section>
-          <h1>What word would you like to search?</h1>
-          <form onSubmit={handleSubmit}>
-            <input
-              type="search"
-              onChange={handleKeywordChange}
-              defaultValue={props.defaultKeyword}
-            />
-          </form>
-          <div className="hint">
-            Suggestions: sunset, wine, yoga, plant and so on...
-          </div>
-        </section>
-        {keyword && <Results results={results} />}
-        {keyword && <Photos photos={photos} />}
+        <div className="Search mb-5">
+          <section>
+            <h1>Please type the word to search</h1>
+            <form onSubmit={handleSubmit}>
+              <div className=" search-element ml-5">
+                <input type="search" onChange={handleKeywordChange} />
+              </div>
+            </form>
+            <div className="mb-3 hint ">
+              <span className="hint-example">Examples: </span>
+              <button className=" btn " onClick={handleHint} id="wine">
+                wine{" "}
+              </button>
+              <button className=" btn " onClick={handleHint} id="beach">
+                beach{" "}
+              </button>
+              <button className=" btn " onClick={handleHint} id="yoga">
+                yoga{" "}
+              </button>
+            </div>
+          </section>
+          {keyword && <Results results={results} />}
+          <section>{keyword && <Photos photos={photos} />}</section>
+        </div>
       </div>
     );
   } else {

@@ -1,4 +1,11 @@
-.Photos img {
-  border-radius: 4px;
+.photos .img {
+  border-radius: 10px;
   margin-bottom: 10px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 10rem 10rem 10rem;
+  row-gap: 1rem;
+  column-gap: 10rem;
 }

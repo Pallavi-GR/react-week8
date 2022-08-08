@@ -1,26 +1,40 @@
 import "./App.css";
-import Dictionary from "./Dictionary.js";
+import React from "react";
+import Dictionary from "./Dictionary";
 
 export default function App() {
   return (
     <div className="App">
       <img
-        src="https://www.shecodes.io/assets/stickers/logo%20text-08ef42643842d30d15f4ce9a81017aeb7a89fe90bac1210665f44373d4807003.gif"
+        src="https://www.shecodes.io/assets/stickers/Dictionary%20App-ab7351320bdebf1442ddd66bc0258459a2cb6eb11cd72b20de4628505a0e34de.gif"
         className="App-logo"
         alt="logo"
       />
-      <h1>Dictionary</h1>
+      <h1>Dictionary App</h1>
 
       <Dictionary />
       <footer className="FooterName">
-        This page is code by Pallavi GR with SheCodes and is Open-sourded on
-        GITHUB @{" "}
+        This page is code by
+        <a
+          href="https://www.linkedin.com/in/pallavi-gutta-ravi"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {" "}
+          Pallavi GR
+        </a>{" "}
+        with
+        <a href="https://shecodes.io" target="_blank" rel="noopener noreferrer">
+          {" "}
+          SheCodes{" "}
+        </a>
+        and is Open-sourded on{" "}
         <a
           href="https://github.com/Pallavi-GR/react-week7.git"
           target="_blank"
           rel="noopener noreferrer"
         >
-          {"  "} PALLAVI GR
+          {"  "} GITHUB
         </a>{" "}
         and
         <a
