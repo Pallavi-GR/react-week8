@@ -30,7 +30,7 @@ export default function App() {
         </a>
         and is Open-sourded on{" "}
         <a
-          href="https://github.com/Pallavi-GR/react-week7.git"
+          href="https://github.com/Pallavi-GR/react-week8.git"
           target="_blank"
           rel="noopener noreferrer"
         >

@@ -1,9 +1,10 @@
 .App {
   font-family: sans-serif;
   max-width: 960px;
-  margin: 0 auto;
+  margin: 5px auto;
   color: rgb(119, 44, 129);
   text-align: center;
+  padding: auto auto;
 }
 
 h1 {
@@ -14,7 +15,7 @@ h1 {
   color: rgb(255, 255, 255);
 }
 body {
-  background-image: url("https://img.freepik.com/premium-vector/blue-circuit-board-background_127747-25.jpg?w=826");
+  background-image: url("https://merriam-webster.com/assets/mw/images/gallery/gal-wap-slideshow-slide/image16078033-3772-df70259bebd57af1160b73f9092196bd@1x.jpg");
   font-size: 20px;
   height: 100vh;
   background-position: center;
@@ -52,6 +53,6 @@ a {
 .FooterName {
   text-align: center;
   font-size: 12px;
-  color: rgb(227, 225, 225);
+  color: rgb(2, 2, 2);
   margin: 30px 0;
 }

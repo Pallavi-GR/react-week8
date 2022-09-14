@@ -65,7 +65,11 @@ export default function Dictionary(props) {
             <h1>Please type the word to search</h1>
             <form onSubmit={handleSubmit}>
               <div className=" search-element ml-5">
-                <input type="search" onChange={handleKeywordChange} />
+                <input
+                  type="search"
+                  onChange={handleKeywordChange}
+                  placeholder="Search a word"
+                />
               </div>
             </form>
             <div className="mb-3 hint ">
